@@ -35,6 +35,8 @@ fi
 # Build the current Ray source
 git rev-parse HEAD > ./docker/deploy/git-rev
 git archive -o ./docker/deploy/ray.tar "$(git rev-parse HEAD)"
+# tar -cvf ray.tar ../ray/
+# mv ray.tar ./docker/deploy/
 if [ $OUTPUT_SHA ]; then
     IMAGE_SHA=$(docker build --no-cache -q -t ray-project/deploy docker/deploy)
 else

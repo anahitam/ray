@@ -331,6 +331,7 @@ def rollout(agent,
     steps = 0
     episodes = 0
     while keep_going(steps, num_steps, episodes, num_episodes):
+        set_trace()
         mapping_cache = {}  # in case policy_agent_mapping is stochastic
         saver.begin_rollout()
         obs = env.reset()
