@@ -17,6 +17,8 @@ from ray.rllib.evaluation.episode import _flatten_action
 from ray.rllib.policy.sample_batch import DEFAULT_POLICY_ID
 from ray.tune.utils import merge_dicts
 
+from ipdb import set_trace
+
 EXAMPLE_USAGE = """
 Example Usage via RLlib CLI:
     rllib rollout /tmp/ray/checkpoint_dir/checkpoint-0 --run DQN
